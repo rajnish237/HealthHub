@@ -1,0 +1,419 @@
+{
+  "dataset": {
+    "n_raw": 110527,
+    "n_removed": 13,
+    "n": 110514,
+    "n_patients": 62294,
+    "no_show_rate": 0.20188392420869755,
+    "date_min": "2016-04-29",
+    "date_max": "2016-06-08",
+    "age_mean": 37.08468610311816,
+    "age_sd": 23.103023577694437,
+    "female_pct": 64.99538520006514,
+    "sms_pct": 32.10543460557034,
+    "lead_time_mean": 10.1844381707295,
+    "lead_time_median": 4.0,
+    "same_day_pct": 34.891506958394416,
+    "no_show_by_sms": {
+      "0": 0.16695320725547425,
+      "1": 0.27575322003325725
+    },
+    "no_show_same_day": 0.046473029045643155,
+    "no_show_not_same_day": 0.28516830197070353,
+    "no_show_by_welfare": {
+      "0": 0.19801711940433303,
+      "1": 0.2373630420771568
+    },
+    "no_show_by_gender_female": {
+      "0": 0.19963810262375598,
+      "1": 0.20309345807403695
+    },
+    "no_show_by_has_history": {
+      "0": 0.1937571661336069,
+      "1": 0.21406285326701333
+    },
+    "no_show_by_lead_time": {
+      "0": 0.0465,
+      "1-3": 0.2288,
+      "4-7": 0.252,
+      "8-14": 0.3047,
+      "15-30": 0.3259,
+      ">30": 0.33
+    },
+    "no_show_by_age": {
+      "0-17": 0.219,
+      "18-34": 0.2397,
+      "35-49": 0.2053,
+      "50-64": 0.1672,
+      "65+": 0.1549
+    },
+    "n_by_lead_time": {
+      "0": 38560,
+      "1-3": 14672,
+      "4-7": 17510,
+      "8-14": 12025,
+      "15-30": 17370,
+      ">30": 10377
+    },
+    "n_by_age": {
+      "0-17": 27378,
+      "18-34": 24244,
+      "35-49": 21864,
+      "50-64": 22634,
+      "65+": 14394
+    },
+    "no_show_by_sms_lead_time_gt3": {
+      "0": 0.33342141189941427,
+      "1": 0.27739696312364426
+    },
+    "sms_pct_lead_time_le2": 0.0,
+    "sms_pct_lead_time_gt3": 60.35927516497329,
+    "n_train": 88517,
+    "n_test": 21997,
+    "train_no_show_rate": 0.20231142040511993,
+    "test_no_show_rate": 0.2001636586807292
+  },
+  "cross_validation": {
+    "LR": {
+      "AUC_mean": 0.7295505090895146,
+      "AUC_sd": 0.00530200563707212,
+      "PR-AUC_mean": 0.3625654470141475,
+      "PR-AUC_sd": 0.008702152848449132
+    },
+    "DT": {
+      "AUC_mean": 0.7290643379271555,
+      "AUC_sd": 0.006130770534325889,
+      "PR-AUC_mean": 0.35148544463215625,
+      "PR-AUC_sd": 0.009449991085652283
+    },
+    "RF": {
+      "AUC_mean": 0.7398032736934805,
+      "AUC_sd": 0.005229999674225881,
+      "PR-AUC_mean": 0.3807586072703934,
+      "PR-AUC_sd": 0.009775661508928633
+    },
+    "HGB": {
+      "AUC_mean": 0.7409753917919115,
+      "AUC_sd": 0.005437816577190656,
+      "PR-AUC_mean": 0.38201478862092775,
+      "PR-AUC_sd": 0.008488706295659423
+    },
+    "XGB": {
+      "AUC_mean": 0.7419246705041126,
+      "AUC_sd": 0.00574247793813149,
+      "PR-AUC_mean": 0.38651167390406693,
+      "PR-AUC_sd": 0.007960910706046084
+    }
+  },
+  "test_set": {
+    "LR": {
+      "AUC": 0.7253533603776668,
+      "PR-AUC": 0.3548946962697237,
+      "F1": 0.43983865963388147,
+      "Precision": 0.3025956284153005,
+      "Recall": 0.8049057460822167,
+      "BalAcc": 0.6703282851134057,
+      "Brier": 0.21489941834973827,
+      "threshold": 0.5154660697927037,
+      "AUC_lo": 0.7187864600569821,
+      "AUC_hi": 0.7317521107609155
+    },
+    "DT": {
+      "AUC": 0.7223429642034915,
+      "PR-AUC": 0.3396897623086071,
+      "F1": 0.43798204577064104,
+      "Precision": 0.30346035917652214,
+      "Recall": 0.7867363161480808,
+      "BalAcc": 0.6674104452173848,
+      "Brier": 0.21608353201078004,
+      "threshold": 0.514789195538099,
+      "AUC_lo": 0.7156280237572765,
+      "AUC_hi": 0.7287494003976999
+    },
+    "RF": {
+      "AUC": 0.7381804083737898,
+      "PR-AUC": 0.3704563771270899,
+      "F1": 0.444403238766302,
+      "Precision": 0.3052819293478261,
+      "Recall": 0.8164887576652282,
+      "BalAcc": 0.6757503467762312,
+      "Brier": 0.20641607687374164,
+      "threshold": 0.49854802526555936,
+      "AUC_lo": 0.7311160252331569,
+      "AUC_hi": 0.7449039998884465
+    },
+    "HGB": {
+      "AUC": 0.7401855814048474,
+      "PR-AUC": 0.37191770597769525,
+      "F1": 0.4498463639467395,
+      "Precision": 0.3216168717047452,
+      "Recall": 0.7481262775380423,
+      "BalAcc": 0.6766094613790018,
+      "Brier": 0.2087591414735645,
+      "threshold": 0.5312888789268149,
+      "AUC_lo": 0.7333495369677753,
+      "AUC_hi": 0.7462812489699611
+    },
+    "XGB": {
+      "AUC": 0.7404865506691664,
+      "PR-AUC": 0.3726736975529418,
+      "F1": 0.44977707841594544,
+      "Precision": 0.316158171260024,
+      "Recall": 0.7790143084260731,
+      "BalAcc": 0.6786682318531412,
+      "Brier": 0.20914095640182495,
+      "threshold": 0.5172267556190491,
+      "AUC_lo": 0.7337162851444479,
+      "AUC_hi": 0.7470091421451758
+    }
+  },
+  "best_model": "XGB",
+  "ablation": {
+    "Patient details only": {
+      "AUC": 0.5992545966584576,
+      "lo": 0.5894254625567551,
+      "hi": 0.6099107976088798,
+      "PR-AUC": 0.274569331865051,
+      "n_features": 8
+    },
+    "+ Booking and scheduling": {
+      "AUC": 0.734056619554015,
+      "lo": 0.727297116552048,
+      "hi": 0.7413157095169167,
+      "PR-AUC": 0.36130172488952417,
+      "n_features": 15
+    },
+    "+ Patient history (full model)": {
+      "AUC": 0.7404865506691664,
+      "lo": 0.7337162851444479,
+      "hi": 0.7470091421451758,
+      "PR-AUC": 0.3726736975529418,
+      "n_features": 20
+    },
+    "Patient history only": {
+      "AUC": 0.5409352730581892,
+      "lo": 0.5322163657991436,
+      "hi": 0.5485647439502473,
+      "PR-AUC": 0.2299073700890175,
+      "n_features": 5
+    },
+    "Full model without SMS": {
+      "AUC": 0.7379137959482863,
+      "lo": 0.7307801998377924,
+      "hi": 0.7450589755648322,
+      "PR-AUC": 0.3665650311485827,
+      "n_features": 19
+    },
+    "Full model without lead-time features": {
+      "AUC": 0.6996770224792479,
+      "lo": 0.6917058228920855,
+      "hi": 0.7079992074881686,
+      "PR-AUC": 0.33459498556114053,
+      "n_features": 17
+    }
+  },
+  "permutation_importance": [
+    {
+      "feature": "lead_time",
+      "mean": 0.13693461119689307,
+      "sd": 0.003185254183662741,
+      "label": "Lead time (days)"
+    },
+    {
+      "feature": "age",
+      "mean": 0.03349572592663479,
+      "sd": 0.0011194804340888833,
+      "label": "Age"
+    },
+    {
+      "feature": "log_lead_time",
+      "mean": 0.011633956262472633,
+      "sd": 0.0008312693654416772,
+      "label": "Log lead time"
+    },
+    {
+      "feature": "neighbourhood_frequency",
+      "mean": 0.006543146677483858,
+      "sd": 0.0003184077199747735,
+      "label": "Neighbourhood frequency"
+    },
+    {
+      "feature": "booking_hour",
+      "mean": 0.005613495670934943,
+      "sd": 0.0010155191385496569,
+      "label": "Booking hour"
+    },
+    {
+      "feature": "prior_no_show_rate",
+      "mean": 0.005533289266045749,
+      "sd": 0.0003320519691712312,
+      "label": "Prior no-show rate"
+    },
+    {
+      "feature": "sms_reminder",
+      "mean": 0.004802228920410934,
+      "sd": 0.00048549434750023377,
+      "label": "SMS reminder"
+    },
+    {
+      "feature": "prior_no_shows",
+      "mean": 0.0022615874844909454,
+      "sd": 0.00023144850072704016,
+      "label": "Prior no-shows"
+    },
+    {
+      "feature": "alcoholism",
+      "mean": 0.0019633394005672987,
+      "sd": 0.00018851510704610974,
+      "label": "Alcoholism"
+    },
+    {
+      "feature": "days_since_previous_appointment",
+      "mean": 0.0018107816110476626,
+      "sd": 0.0005722361208051466,
+      "label": "Days since previous appointment"
+    },
+    {
+      "feature": "appointment_weekday",
+      "mean": 0.0015607996253135248,
+      "sd": 0.0003630915205985379,
+      "label": "Appointment weekday"
+    },
+    {
+      "feature": "same_day_booking",
+      "mean": 0.0014144574352264795,
+      "sd": 0.00015101478327133672,
+      "label": "Same-day booking"
+    },
+    {
+      "feature": "prior_appointments",
+      "mean": 0.0013242763809466762,
+      "sd": 0.0003381057901768984,
+      "label": "Prior appointments"
+    },
+    {
+      "feature": "female",
+      "mean": 0.0008543770638467674,
+      "sd": 0.0001772161050558354,
+      "label": "Gender (female)"
+    },
+    {
+      "feature": "diabetes",
+      "mean": 0.0006003546157608896,
+      "sd": 0.0002929976210787731,
+      "label": "Diabetes"
+    },
+    {
+      "feature": "booking_weekday",
+      "mean": 0.0005168809871615165,
+      "sd": 0.0002765323679881104,
+      "label": "Booking weekday"
+    },
+    {
+      "feature": "hypertension",
+      "mean": 0.00046393673064528687,
+      "sd": 0.0001364730658230014,
+      "label": "Hypertension"
+    },
+    {
+      "feature": "welfare_enrolment",
+      "mean": 0.0003798718778424082,
+      "sd": 0.00030466442601010215,
+      "label": "Welfare enrolment"
+    },
+    {
+      "feature": "disability",
+      "mean": 0.0003019658256403268,
+      "sd": 8.646810155076019e-05,
+      "label": "Disability"
+    },
+    {
+      "feature": "has_history",
+      "mean": 2.7728156969386575e-06,
+      "sd": 1.0274041284808668e-05,
+      "label": "Has-history flag"
+    }
+  ],
+  "gains": {
+    "top_5%": {
+      "no_show_rate_in_flagged": 0.4494995450409463,
+      "lift": 2.2456601163446956,
+      "captured": 0.11219622984328867
+    },
+    "top_10%": {
+      "no_show_rate_in_flagged": 0.428831286948613,
+      "lift": 2.1424033202381647,
+      "captured": 0.21417215534862594
+    },
+    "top_20%": {
+      "no_show_rate_in_flagged": 0.39622641509433965,
+      "lift": 1.9795122536520984,
+      "captured": 0.3958664546899841
+    },
+    "top_30%": {
+      "no_show_rate_in_flagged": 0.3620245491741173,
+      "lift": 1.808642745442439,
+      "captured": 0.5425846014081308
+    }
+  },
+  "confusion_matrix_best_model": [
+    [
+      10175,
+      7419
+    ],
+    [
+      973,
+      3430
+    ]
+  ],
+  "features": [
+    "age",
+    "female",
+    "welfare_enrolment",
+    "hypertension",
+    "diabetes",
+    "alcoholism",
+    "disability",
+    "sms_reminder",
+    "lead_time",
+    "log_lead_time",
+    "same_day_booking",
+    "booking_weekday",
+    "appointment_weekday",
+    "booking_hour",
+    "neighbourhood_frequency",
+    "prior_appointments",
+    "prior_no_shows",
+    "prior_no_show_rate",
+    "has_history",
+    "days_since_previous_appointment"
+  ],
+  "checks": {
+    "AUC_drop_without_lead_time_features": 0.040809528189918454,
+    "AUC_drop_without_sms": 0.0025727547208800328,
+    "AUC_gain_from_patient_history": 0.006429931115151333,
+    "sms_pct_by_lead_time_days_(5 = 5 or more)": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 33.1,
+      "4": 57.7,
+      "5": 60.6
+    },
+    "no_show_rate_by_sms_lead_time_gt2": {
+      "0": 0.3269,
+      "1": 0.2758
+    },
+    "sms_pct_lead_time_gt2": 59.11824982921505,
+    "no_show_rate_by_sms_lead_time_gt3": {
+      "0": 0.3334,
+      "1": 0.2774
+    },
+    "sms_pct_lead_time_gt3": 60.35927516497329,
+    "no_show_rate_by_sms_lead_time_ge3": {
+      "0": 0.3269,
+      "1": 0.2758
+    },
+    "sms_pct_lead_time_ge3": 59.11824982921505
+  }
+}
